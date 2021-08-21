@@ -14,7 +14,7 @@ const Account = () => {
 
     useEffect( () => {
         async function fetchData() {
-          const res = await axios.get('http://localhost:8000/users/find/'+sessionStorage.getItem('userId'))
+          const res = await axios.get('https://tranquil-forest-69520.herokuapp.com/users/find/'+sessionStorage.getItem('userId'))
           setUsername(res.data['username'])
           setEmail(res.data['email'])
           setCreatedAt(res.data['createdAt'])
