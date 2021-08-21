@@ -36,7 +36,7 @@ const Inicio = () => {
 
     const updateDB = (a,b,c,d) => {
         if (sessionStorage.getItem("userId") !== null ){
-            axios.post('http://localhost:8000/users/update/'+sessionStorage.getItem('userId'), {data:{}}, {params: {games:a, wins: b, solutions:c, clues:d}})
+            axios.post('http://tranquil-forest-69520.herokuapp.com/users/update/'+sessionStorage.getItem('userId'), {data:{}}, {params: {games:a, wins: b, solutions:c, clues:d}})
         }
     }
     const changeColor = (a,b) => {

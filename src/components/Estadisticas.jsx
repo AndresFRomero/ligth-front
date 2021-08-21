@@ -17,7 +17,7 @@ const Estadisticas = () => {
 
   useEffect( () => {
     async function fetchData() {
-      const res = await axios.get('http://localhost:8000/users/find/'+sessionStorage.getItem('userId'))
+      const res = await axios.get('http://tranquil-forest-69520.herokuapp.com/users/find/'+sessionStorage.getItem('userId'))
       setGames(res.data['games'])
       setWins(res.data['wins'])
       setClues(res.data['clues'])

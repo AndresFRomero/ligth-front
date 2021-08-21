@@ -32,9 +32,9 @@ const Register = () => {
           verified: "Sin Verificar"
         }
 
-        const response = await axios.get('http://localhost:8000/users/validateRegister', { params : {username: username, email: email}})
+        const response = await axios.get('http://tranquil-forest-69520.herokuapp.com/users/validateRegister', { params : {username: username, email: email}})
         if (response.status === 200) {
-          const res = await axios.post('http://localhost:8000/users/add', newUser)
+          const res = await axios.post('http://tranquil-forest-69520.herokuapp.com/users/add', newUser)
           console.log(`Form submitted:`);
           setUsername("")
           setEmail("")

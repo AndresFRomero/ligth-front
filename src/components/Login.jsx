@@ -16,7 +16,7 @@ const Login = () => {
     const tryLogin = async (e) => {
 
       e.preventDefault()
-      const res = await axios.get('http://localhost:8000/users/findUser/' + username +'/'+ password)
+      const res = await axios.get('http://tranquil-forest-69520.herokuapp.com/users/findUser/' + username +'/'+ password)
 
       if (res.data === "data is not found") {
         alert("Usuario no registrado")
